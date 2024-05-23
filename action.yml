@@ -1,0 +1,23 @@
+name: 'Deploy Docker Swarm cluster services stack'
+description: 'Deploys a Docker Swarm cluster services stack.'
+author: 'Sovarto GmbH'
+
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
+
+inputs:
+  stack-name:
+    description: 'The name of the stack that will be deployed'
+    required: true
+  services-definition:
+    description: 'The file path to the services definition'
+    required: true
+    default: '.cluster/services-definition.tmpl.yaml'
+  remote-state-access-token:
+    description: 'The access token for the remote state'
+    required: true
+
+runs:
+  using: node20
+  main: dist/index.js
