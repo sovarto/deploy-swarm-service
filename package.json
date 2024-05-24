@@ -24,7 +24,7 @@
   },
   "scripts": {
     "bundle": "npm run package",
-    "package": "linefix src && npx ncc build src/index.ts -o dist --source-map --license licenses.txt && linefix dist",
+    "package": "docker run --rm -v \".:/src\" -w /src --entrypoint sh node:lts -c \"cd /src && export PATH=/src/node_modules/.bin:$PATH && linefix src && npx ncc build src/index.ts -o dist --source-map --license licenses.txt && linefix dist\"",
     "package:watch": "npm run package -- --watch"
   },
   "license": "MIT",
