@@ -1,6 +1,6 @@
 {
-  "name": "@sovarto/swarm-service-render-services-definition",
-  "description": "Renders a Docker Swarm services cluster definition.",
+  "name": "@sovarto/deploy-swarm-services",
+  "description": "Deploys a Docker Swarm cluster services stack.",
   "version": "1.0.0",
   "author": "Sovarto GmbH",
   "private": true,
@@ -24,12 +24,8 @@
   },
   "scripts": {
     "bundle": "npm run package",
-    "ci-test": "npx jest",
-    "coverage": "npx make-coverage-badge --output-path ./badges/coverage.svg",
     "package": "linefix src && npx ncc build src/index.ts -o dist --source-map --license licenses.txt",
-    "package:watch": "npm run package -- --watch",
-    "test": "npx jest",
-    "all": "npm run test && npm run coverage && npm run package"
+    "package:watch": "npm run package -- --watch"
   },
   "license": "MIT",
   "jest": {
@@ -63,7 +59,7 @@
   },
   "dependencies": {
     "@actions/core": "^1.10.1",
-    "@sovarto/pipelines-deploy-service-core": "^0.0.3",
+    "@sovarto/pipelines-deploy-service-core": "^0.0.7",
     "js-yaml": "^4.1.0",
     "tmp": "^0.2.3",
     "zod": "^3.23.8"
