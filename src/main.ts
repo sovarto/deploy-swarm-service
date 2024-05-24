@@ -14,7 +14,7 @@ export async function run(): Promise<void> {
         await deploy(stackName, remoteStateAccessToken, servicesDefinitionFile);
     } catch (error) {
         if (error instanceof Error) {
-            core.setFailed(error.message);
+            core.setFailed(error);
         } else {
             core.setFailed(`Unknown error of type '${ typeof error }${ typeof error === 'object'
                                                                        ? ` / ${ error!.constructor.name }`
