@@ -24,7 +24,7 @@
   },
   "scripts": {
     "bundle": "npm run package",
-    "package": "linefix src && npx ncc build src/index.ts -o dist --source-map --license licenses.txt",
+    "package": "linefix src && npx ncc build src/index.ts -o dist --source-map --license licenses.txt && linefix dist",
     "package:watch": "npm run package -- --watch"
   },
   "license": "MIT",
