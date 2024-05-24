@@ -13,12 +13,28 @@ export async function run(): Promise<void> {
 
         await deploy(stackName, remoteStateAccessToken, servicesDefinitionFile);
     } catch (error) {
-        if (error instanceof Error) {
-            core.setFailed(error);
-        } else {
-            core.setFailed(`Unknown error of type '${ typeof error }${ typeof error === 'object'
-                                                                       ? ` / ${ error!.constructor.name }`
-                                                                       : '' }' occurred:\n\n${error}`);
-        }
+        core.setFailed(formatError(error));
     }
+}
+
+function formatErrorOfUnknownType(error: unknown) {
+    return `Unknown error of type '${ typeof error }${ typeof error === 'object'
+                                                       ? ` / ${ error!.constructor.name }`
+                                                       : '' }' occurred:\n\n${ error }`;
+}
+
+function formatError(error: unknown) {
+    if (error instanceof Error) {
+        let result = `${ error.name }: ${ error.message }\n\n`;
+        if (error.cause) {
+            result += `Cause:\n${ formatError(error.cause) }`;
+        }
+        if (error instanceof AggregateError) {
+            result += `Errors:\n${error.errors.map(formatError).map(x => `- ${x}`).join('\n')}`
+        }
+
+        return result;
+    }
+
+    return formatErrorOfUnknownType(error);
 }
