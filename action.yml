@@ -10,6 +10,7 @@ inputs:
   stack-name:
     description: 'The name of the stack that will be deployed. Used for the Terraform state filename.'
     required: true
+    default: "${{ github.event.repository.name }}"
   namespace:
     description: 'The namespace (=docker stack) to which the service(s) will be deployed'
     required: true
