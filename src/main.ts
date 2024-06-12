@@ -9,9 +9,10 @@ export async function run(): Promise<void> {
     try {
         const servicesDefinitionFile = core.getInput('services-definition', { required: true });
         const stackName = core.getInput('stack-name', { required: true });
+        const namespace = core.getInput('namespace', { required: true });
         const remoteStateAccessToken = core.getInput('remote-state-access-token', { required: true });
 
-        await deploy(stackName, remoteStateAccessToken, servicesDefinitionFile);
+        await deploy(stackName, namespace, remoteStateAccessToken, servicesDefinitionFile);
     } catch (error) {
         core.setFailed(formatError(error));
     }

@@ -8,7 +8,10 @@ branding:
 
 inputs:
   stack-name:
-    description: 'The name of the stack that will be deployed'
+    description: 'The name of the stack that will be deployed. Used for the Terraform state filename.'
+    required: true
+  namespace:
+    description: 'The namespace (=docker stack) to which the service(s) will be deployed'
     required: true
   services-definition:
     description: 'The file path to the services definition'
