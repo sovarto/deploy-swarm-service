@@ -15710,7 +15710,7 @@ Apache License
 UNLICENSED
 
 @sovarto/pipelines-deploy-service-core
-UNLICENSED
+MIT
 
 archiver
 MIT
