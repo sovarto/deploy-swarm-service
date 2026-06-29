@@ -34383,7 +34383,7 @@ var createWaiter = /* @__PURE__ */ __name(async (options, input, acceptorChecks)
 
 "use strict";
 
-// https://registry.terraform.io/providers/sovarto/docker/3.0.10/docs
+// https://registry.terraform.io/providers/sovarto/docker/4.0.0/docs
 // generated from terraform resource schema
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -34478,7 +34478,7 @@ function dockerProviderRegistryAuthToHclTerraform(struct) {
     return Object.fromEntries(Object.entries(attrs).filter(([_, value]) => value !== undefined && value.value !== undefined));
 }
 /**
-* Represents a {@link https://registry.terraform.io/providers/sovarto/docker/3.0.10/docs docker}
+* Represents a {@link https://registry.terraform.io/providers/sovarto/docker/4.0.0/docs docker}
 */
 class DockerProvider extends cdktf.TerraformProvider {
     // =================
@@ -34492,7 +34492,7 @@ class DockerProvider extends cdktf.TerraformProvider {
     * Generates CDKTF code for importing a DockerProvider resource upon running "cdktf plan <stack-name>"
     * @param scope The scope in which to define this construct
     * @param importToId The construct id used in the generated config for the DockerProvider to import
-    * @param importFromId The id of the existing DockerProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/sovarto/docker/3.0.10/docs#import import section} in the documentation of this resource for the id to use
+    * @param importFromId The id of the existing DockerProvider that should be imported. Refer to the {@link https://registry.terraform.io/providers/sovarto/docker/4.0.0/docs#import import section} in the documentation of this resource for the id to use
     * @param provider? Optional instance of the provider where the DockerProvider to import is found
     */
     static generateConfigForImport(scope, importToId, importFromId, provider) {
@@ -34502,7 +34502,7 @@ class DockerProvider extends cdktf.TerraformProvider {
     // INITIALIZER
     // ===========
     /**
-    * Create a new {@link https://registry.terraform.io/providers/sovarto/docker/3.0.10/docs docker} Resource
+    * Create a new {@link https://registry.terraform.io/providers/sovarto/docker/4.0.0/docs docker} Resource
     *
     * @param scope The scope in which to define this construct
     * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -34513,7 +34513,7 @@ class DockerProvider extends cdktf.TerraformProvider {
             terraformResourceType: 'docker',
             terraformGeneratorMetadata: {
                 providerName: 'docker',
-                providerVersion: '3.0.10'
+                providerVersion: '4.0.0'
             },
             terraformProviderSource: 'registry.terraform.io/sovarto/docker'
         });
@@ -34729,7 +34729,7 @@ exports.DockerProvider = DockerProvider;
 
 "use strict";
 
-// https://registry.terraform.io/providers/sovarto/docker/3.0.10/docs/resources/service
+// https://registry.terraform.io/providers/sovarto/docker/4.0.0/docs/resources/service
 // generated from terraform resource schema
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -40478,7 +40478,7 @@ class ServiceUpdateConfigOutputReference extends cdktf.ComplexObject {
 }
 exports.ServiceUpdateConfigOutputReference = ServiceUpdateConfigOutputReference;
 /**
-* Represents a {@link https://registry.terraform.io/providers/sovarto/docker/3.0.10/docs/resources/service docker_service}
+* Represents a {@link https://registry.terraform.io/providers/sovarto/docker/4.0.0/docs/resources/service docker_service}
 */
 class Service extends cdktf.TerraformResource {
     // =================
@@ -40492,7 +40492,7 @@ class Service extends cdktf.TerraformResource {
     * Generates CDKTF code for importing a Service resource upon running "cdktf plan <stack-name>"
     * @param scope The scope in which to define this construct
     * @param importToId The construct id used in the generated config for the Service to import
-    * @param importFromId The id of the existing Service that should be imported. Refer to the {@link https://registry.terraform.io/providers/sovarto/docker/3.0.10/docs/resources/service#import import section} in the documentation of this resource for the id to use
+    * @param importFromId The id of the existing Service that should be imported. Refer to the {@link https://registry.terraform.io/providers/sovarto/docker/4.0.0/docs/resources/service#import import section} in the documentation of this resource for the id to use
     * @param provider? Optional instance of the provider where the Service to import is found
     */
     static generateConfigForImport(scope, importToId, importFromId, provider) {
@@ -40502,7 +40502,7 @@ class Service extends cdktf.TerraformResource {
     // INITIALIZER
     // ===========
     /**
-    * Create a new {@link https://registry.terraform.io/providers/sovarto/docker/3.0.10/docs/resources/service docker_service} Resource
+    * Create a new {@link https://registry.terraform.io/providers/sovarto/docker/4.0.0/docs/resources/service docker_service} Resource
     *
     * @param scope The scope in which to define this construct
     * @param id The scoped construct ID. Must be unique amongst siblings in the same scope
@@ -40513,7 +40513,7 @@ class Service extends cdktf.TerraformResource {
             terraformResourceType: 'docker_service',
             terraformGeneratorMetadata: {
                 providerName: 'docker',
-                providerVersion: '3.0.10'
+                providerVersion: '4.0.0'
             },
             provider: config.provider,
             dependsOn: config.dependsOn,
